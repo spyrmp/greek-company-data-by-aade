@@ -1,0 +1,45 @@
+{
+    "name": "spyrmp/greek-company-data-by-aade",
+    "description": "Get greek company data from aade service with auth user",
+    "type": "library",
+    "require": {
+        "ricorocks-digital-agency/soap": "^1.5",
+        "laravel/framework": "^8.0",
+        "ext-soap": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Spyrmp\\GreekCompanyDataByAade\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spyrmp\\GreekCompanyDataByAade\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "spyrm",
+            "email": "spyros@onecode.gr"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spyrmp\\GreekCompanyDataByAade\\GreekCompanyDataByAadeProvider"
+            ],
+            "aliases": {
+                "Spyrmp\\GreekCompanyDataByAade": "Spyrmp\\GreekCompanyDataByAade\\Facades\\GreekCompanyDataByAade"
+            }
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "test-f": "./vendor/bin/phpunit --filter"
+    }
+}
